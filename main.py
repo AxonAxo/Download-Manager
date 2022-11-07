@@ -23,7 +23,7 @@ def main():
             dest = Direc + "/Text/" + x
             os.rename(direcwfile, dest)
             print(f"Moved {x} into 'Text' ")
-        elif x.endswith(".stl"):
+        elif x.endswith(".stl" or ".step" or ".f3d"):
             direcwfile = Direc + "/" + x
             dest = Direc + "/3D_Models/" + x
             os.rename(direcwfile, dest)
@@ -33,6 +33,26 @@ def main():
             dest = Direc + "/Archives/" + x
             os.rename(direcwfile, dest)
             print(f"Moved {x} into 'Archives' ")
+        elif x.endswith(".png" or ".jpg" or ".jepg" or ".webm"):
+            direcwfile = Direc + "/" + x
+            dest = Direc + "/Images/" + x
+            os.rename(direcwfile, dest)
+            print(f"Moved {x} into 'Images' ")
+        elif x.endswith(".mov" or ".mp4" or ".mkv"):
+            direcwfile = Direc + "/" + x
+            dest = Direc + "/Videos/" + x
+            os.rename(direcwfile, dest)
+            print(f"Moved {x} into 'Videos' ")
+        elif x.endswith(".mp3" or ".wav" or ".ogg"):
+            direcwfile = Direc + "/" + x
+            dest = Direc + "/Music/" + x
+            os.rename(direcwfile, dest)
+            print(f"Moved {x} into 'Music' ")
+        elif x.endswith(".exe" or ".appimage" or ".msi"):
+            direcwfile = Direc + "/" + x
+            dest = Direc + "/Programs/" + x
+            os.rename(direcwfile, dest)
+            print(f"Moved {x} into 'Programs' ")
 
 
 # Press the green button in the gutter to run the script.
