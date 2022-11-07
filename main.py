@@ -6,7 +6,7 @@ import os
 
 
 def main():
-    print("Python Program to print list the files in a directory.")
+
 
     Direc = "/home/travis/Downloads"
     print(f"Files in the directory: {Direc}")
@@ -25,13 +25,19 @@ def main():
             print(f"Moved {x} into 'Text' ")
         elif x.endswith(".stl"):
             direcwfile = Direc + "/" + x
-            dest = Direc + "/STL/" + x
+            dest = Direc + "/3D_Models/" + x
             os.rename(direcwfile, dest)
-            print(f"Moved {x} into 'STL' ")
+            print(f"Moved {x} into '3D Models' ")
+        elif x.endswith(".zip" or ".rar" or ".7z" or ".tar.gz"):
+            direcwfile = Direc + "/" + x
+            dest = Direc + "/Archives/" + x
+            os.rename(direcwfile, dest)
+            print(f"Moved {x} into 'Archives' ")
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    main()
+    while 3 > 2:
+        main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
